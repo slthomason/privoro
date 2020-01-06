@@ -1,20 +1,20 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: helloworld-gke
+  name: privoro
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: privoro
   template:
     metadata:
       labels:
-        app: hello
+        app: privoro
     spec:
       containers:
-      - name: hello-app
-        image: gcr.io/rivoro-264120/helloworld-gke:latest
+      - name: privoro-app
+        image: gcr.io/privoro-264120/privoro:latest
         ports:
         - containerPort: 8080
         env:
