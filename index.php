@@ -1,12 +1,15 @@
 
 <?php
 
+echo "Node id:\t";
+echo gethostname();
+
 function convert($size)
 {
     $unit=array('b','kb','mb','gb','tb','pb');
     return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i];
 }
-echo "Memory Usage:\t";
+echo "<br/>Memory Usage:\t";
 echo convert(memory_get_usage(true)); 
 
 echo "<br/>CPU Usage:\t";
